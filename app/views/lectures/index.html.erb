@@ -1,18 +1,13 @@
-<div class="banner"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path("homepage.jpg") %>)">
-  <div class="container">
+<div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('victoria-unsplash.jpg') %>);">
+  <div class="w-50">
     <h1><strong>Tech Skills To Creative People</strong>!</h1>
-    <%= link_to "Browse course", lectures_path, class: "btn btn-primary mt-3" %>
+    <%= link_to "Create Lecture", new_lecture_path, class: "btn btn-primary mt-3" %>
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="card-trip">
+<div class="container mt-5">
+<h3> List </h3>
+<div class="card-trip-index">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
   <div class="card-trip-infos">
     <div>
@@ -22,4 +17,6 @@
     <h2 class="card-trip-pricing">£99.99</h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
+</div>
+
 </div>

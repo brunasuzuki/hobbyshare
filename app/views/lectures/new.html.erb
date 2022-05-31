@@ -1,0 +1,13 @@
+<div class= "container col-6">
+<h2>Upload Your Lecture</h2>
+
+<%= simple_form_for(@lecture) do |f| %>
+  <%# f.error_notification %>
+  <%# f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :youtube_url %>
+  <%= f.button :submit, class: "btn btn-primary mt-3"%>
+
+<% end %>
