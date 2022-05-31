@@ -1,0 +1,7 @@
+<h1><%= @lecture.title %></h1>
+<p> <%= @lecture.descriptio %></p>
+<p> <%= @lecture.price %></p>
+<p> <%= @lecture.youtube_url %></p>
+<%= link_to 'Back', lectures_path %>
+<%= link_to 'Edit', new_restaurant_review_path(@lectures) %>
+<%= link_to 'Delete', new_restaurant_review_path(@lectures) %> <%#@restaurant vindo do controller  %>
