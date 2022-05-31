@@ -1,0 +1,10 @@
+<h1>Upload Your Lecture</h1>
+
+<%= simple_form_for(@lecture) do |f| %>
+  <%# f.error_notification %>
+  <%# f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.input :title %>
+  <%= f.input : %> <%# file para ficar no formato de upload%>
+  <%= f.button :submit %>
+
+<% end %>
