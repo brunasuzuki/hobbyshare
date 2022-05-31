@@ -1,5 +1,5 @@
 class LecturesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index 
+  skip_before_action :authenticate_user!, only: :index
   def index
     @lectures = Lecture.all
   end
@@ -14,6 +14,7 @@ class LecturesController < ApplicationController
 
   def create
     @lecture = Lecture.new(lecture_params)
+    @lecture.user = current_user
 
     if @lecture.save
       redirect_to @lecture, notice: 'Lecture was successfully created.'
@@ -27,6 +28,7 @@ class LecturesController < ApplicationController
   end
 
 
+
   def destroy
     @lecture = Lecture.find(params[:id])
     @lecture.destroy
@@ -36,7 +38,7 @@ class LecturesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def lecture_params
-    params.require(:lecture).permit(:title, :description, :price)
+    params.require(:lecture).permit(:title, :description, :price, :youtube_url)
   end
 
 end
