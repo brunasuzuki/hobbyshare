@@ -9,4 +9,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, :email, presence: true
+
 end
