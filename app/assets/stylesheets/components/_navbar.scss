@@ -1,12 +1,13 @@
-.navbar-lewagon {
+.navbar-hobbyshare {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-hobbyshare .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-hobbyshare .navbar-brand img {
   width: 40px;
+  border-radius: 50%;
 }
