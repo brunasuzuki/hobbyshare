@@ -24,10 +24,17 @@ class LecturesController < ApplicationController
   end
 
   def update
-
+    @lecture = Lecture.find(params[:id])
+    if @lecture.update(lecture_params)
+      redirect_to @lecture, notice: 'Lecture was successfully updated!'
+    else
+      render :edit
+    end
   end
 
-
+  def edit
+    @lecture = Lecture.find(params[:id])
+  end
 
   def destroy
     @lecture = Lecture.find(params[:id])
