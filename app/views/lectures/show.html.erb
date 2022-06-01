@@ -13,9 +13,13 @@
       <h5> <%= @lecture.youtube_url %></h5>
       <div class="links">
         <div class="d-flex justify-content-between">
-          <%= link_to 'Back', lectures_path %>
-          <%= link_to 'Edit', @lecture %>
-          <%= link_to 'Delete', @lecture %>
+          <%= link_to 'Back', lectures_path, class: "btn btn-secondary"%>
+          <% if @lecture.user == current_user %>
+            <%= link_to 'Edit', edit_lecture_path(@lecture), class: "btn btn-success" %>
+            <%= link_to 'Delete', lecture_path(@lecture), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %> <%#@restaurant vindo do controller  %>
+          <% else %>
+            <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-secondary"%>
+          <% end %>
         </div>
       </div>
     </div>
