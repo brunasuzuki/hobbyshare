@@ -1,14 +1,14 @@
-<div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('https://images.pexels.com/photos/947785/pexels-photo-947785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') %>);">
+<div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('https://images.pexels.com/photos/5905716/pexels-photo-5905716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') %>);">
   <div class="w-50">
-    <h1><strong>Photography</strong></h1>
-    <%= link_to "Create Lecture", new_lecture_path, class: "btn btn-primary mt-3" %>
+    <h1><strong>Created Lecture</strong></h1>
+    <%= link_to "Upload Here", new_lecture_path, class: "btn btn-primary mt-3" %>
   </div>
 </div>
 
 <% @lectures.each do |lecture| %>
   <div class="container mt-5">
     <div class="card-trip">
-      <img src="https://images.pexels.com/photos/65538/pexels-photo-65538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+      <img src="https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
       <div class="card-trip-infos">
         <div>
           <h2><%= lecture.title %></h2>
