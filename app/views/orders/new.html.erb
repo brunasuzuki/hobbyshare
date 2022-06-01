@@ -1,0 +1,6 @@
+<div class="container">
+  <h2><%= @lecture.title %></h2>
+  <h4><%= @lecture.price %></h4>
+  <%= link_to "Confirm purchase", lecture_orders_path(@lecture), method: :post, class: "btn btn-primary" %>
+  <%= link_to "Back", lecture_path(@lecture), class: "btn btn-warning" %>
+</div>
