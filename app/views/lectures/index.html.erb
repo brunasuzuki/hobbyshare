@@ -1,20 +1,21 @@
-<div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('victoria-unsplash.jpg') %>);">
+<div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('https://images.pexels.com/photos/947785/pexels-photo-947785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') %>);">
   <div class="w-50">
-    <h1><strong>Skills To Creative People</strong>!</h1>
+    <h1><strong>Photography</strong></h1>
     <%= link_to "Create Lecture", new_lecture_path, class: "btn btn-primary mt-3" %>
   </div>
 </div>
 
-<div class="container mt-5">
-  <h3> List </h3>
-<div class="card-trip">
-  <img src="https://images.pexels.com/photos/6440257/pexels-photo-6440257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-  <div class="card-trip-infos">
-    <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
+<% @lectures.each do |lecture| %>
+  <div class="container mt-5">
+    <div class="card-trip">
+      <img src="https://images.pexels.com/photos/65538/pexels-photo-65538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= lecture.title %></h2>
+          <%= link_to "Description", lecture_path(lecture), class: "btn btn-info mt-3" %>
+        </div>
+        <h2 class="card-trip-pricing"> <%= number_to_currency(lecture.price) %></h2>
+      </div>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
   </div>
-</div>
-</div>
+<% end %>
