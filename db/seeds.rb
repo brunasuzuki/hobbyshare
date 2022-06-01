@@ -10,6 +10,6 @@ puts "done"
 
 puts "creating lecture"
 Lecture.create!(user: user1, title:"Photography", description:"Photography for beginners", price: 22.00, youtube_url:"https://www.youtube.com/watch?v=YFWiE8faifU")
-Lecture.create!(user: user2, title:"Painting", description:"Painting for beginners", price: 25.0, youtube_url: "https://www.youtube.com/watch?v=oFmvR3u4jWI")
-Lecture.create!(user: user3, title:"Illustration", description:"Illustration level 1", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=YJ48i7ObA4Y")
+Lecture.create!(user: user2, title:"Painting", description:"Painting for beginners", price: 25.0, youtube_url: "https://www.youtube.com/watch?v=V1kzNUc4u5Y")
+Lecture.create!(user: user3, title:"Illustration", description:"Illustration level 1", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=bZ9HG0pvysM")
 puts "finished"
