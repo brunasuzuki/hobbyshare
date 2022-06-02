@@ -3,4 +3,5 @@ class Lecture < ApplicationRecord
   has_many :orders, dependent: :destroy
   validates :title, :description, :price, :youtube_url, presence: true
   validates :description, length: { minimum: 6 }
+  has_one_attached :photo
 end

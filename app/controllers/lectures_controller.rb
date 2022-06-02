@@ -49,7 +49,9 @@ class LecturesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def lecture_params
-    params.require(:lecture).permit(:title, :description, :price, :youtube_url)
+    params.require(:lecture).permit(:title, :description, :price, :youtube_url, :photo)
   end
+
+
 
 end
