@@ -1,22 +1,24 @@
-<div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('show-lecture.jpg') %>);">
-  <div class="w-40">
-  </div>
-</div>
-
-
 <div class="container my-5">
   <div class="row justify-content-center">
     <div class="box-description col-8">
-      <h1><strong><%= @lecture.title %></strong></h1>
-      <h3> <%= @lecture.description %></h3>
+      <h1><strong><%= @lecture.title %></strong>
+        <% if @lecture.user == current_user %>
+          <%= link_to edit_lecture_path(@lecture) do %>
+            <i class="fas fa-pencil-alt"></i>
+          <% end %>
+          <%= link_to lecture_path(@lecture), method: :delete, data: { confirm: "Are you sure?"} do %>
+          <i class="fas fa-trash-alt"></i>
+          <% end %>
+        <% end %>
+      </h1>
+      <h4> <%= @lecture.description %></h4>
       <h4> <%= @lecture.price %></h4>
       <div class="links">
-        <div class="d-flex justify-content-between">
-          <%= link_to 'Back', lectures_path, class: "btn btn-secondary"%>
-          <% if @lecture.user == current_user %>
-            <%= link_to 'Edit', edit_lecture_path(@lecture), class: "btn btn-success" %>
-            <%= link_to 'Delete', lecture_path(@lecture), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %> <%#@restaurant vindo do controller  %>
-          <% else %>
+        <div class="d-flex">
+          <%= link_to lectures_path do %>
+            <i class="fas fa-angle-double-left"></i>
+          <% end %>
+          <% if @lecture.user != current_user %>
             <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
           <% end %>
         </div>

@@ -1,8 +1,8 @@
 class LecturesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
-    if params[:search][:query].present?
-      @lectures = Lecture.where("title ILIKE ?", "%#{params[:search][:query]}%")
+    if params[:query].present?
+      @lectures = Lecture.where("title ILIKE ?", "%#{params[:query]}%")
     else
       @lectures = Lecture.all
     end
