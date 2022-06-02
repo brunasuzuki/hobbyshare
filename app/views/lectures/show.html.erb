@@ -17,7 +17,7 @@
             <%= link_to 'Edit', edit_lecture_path(@lecture), class: "btn btn-success" %>
             <%= link_to 'Delete', lecture_path(@lecture), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %> <%#@restaurant vindo do controller  %>
           <% else %>
-            <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
+            <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary"%>
           <% end %>
         </div>
       </div>
