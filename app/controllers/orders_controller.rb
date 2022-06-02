@@ -1,8 +1,9 @@
 class OrdersController < ApplicationController
-  before_action :set_lecture
+  before_action :set_lecture, except: :show
 
-  def index
-    @orders = Order.all
+  def show
+    @order = Order.find(params[:id])
+
   end
 
   def new
@@ -13,7 +14,7 @@ class OrdersController < ApplicationController
     @lecture = Lecture.find(params[:lecture_id])
     @order = Order.new(lecture: @lecture, user: current_user)
     if @order.save
-      redirect_to lecture_orders_path, alert: "Order created"
+      redirect_to order_path(@order), alert: "Order created"
     else
       render :new
     end
