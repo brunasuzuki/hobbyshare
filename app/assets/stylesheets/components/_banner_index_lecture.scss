@@ -1,7 +1,8 @@
 .banner_index {
   display: flex;
   align-items: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   height: 70vh;
   justify-content: flex-start;
