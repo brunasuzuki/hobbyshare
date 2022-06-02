@@ -10,7 +10,6 @@
       <h1><strong><%= @lecture.title %></strong></h1>
       <h3> <%= @lecture.description %></h3>
       <h4> <%= @lecture.price %></h4>
-      <h5> <%= @lecture.youtube_url %></h5>
       <div class="links">
         <div class="d-flex justify-content-between">
           <%= link_to 'Back', lectures_path, class: "btn btn-secondary"%>
@@ -18,7 +17,7 @@
             <%= link_to 'Edit', edit_lecture_path(@lecture), class: "btn btn-success" %>
             <%= link_to 'Delete', lecture_path(@lecture), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %> <%#@restaurant vindo do controller  %>
           <% else %>
-            <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-secondary"%>
+            <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
           <% end %>
         </div>
       </div>
@@ -26,9 +25,6 @@
     <div class="col-4">
       <div class="card-trip-small">
         <img src="https://images.pexels.com/photos/7859276/pexels-photo-7859276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <div class="card-product-infos d-flex justify-content-center align-items-center">
-          <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
-        </div>
       </div>
     </div>
   </div>
