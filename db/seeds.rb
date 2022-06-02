@@ -3,9 +3,9 @@ User.destroy_all
 
 puts "creating users"
 user1 = User.create!(name: "Erica", email: "erica@teste.com", password: "123456")
-user2 = User.create!(name: "akemi", email: "akemi@teste.com", password: "123456")
-user3 = User.create!(name: "natalia", email: "natalia@teste.com", password: "123456")
-user4 = User.create!(name: "bruna", email: "bruna@teste.com", password: "123456")
+user2 = User.create!(name: "Akemi", email: "akemi@teste.com", password: "123456")
+user3 = User.create!(name: "Natalia", email: "natalia@teste.com", password: "123456")
+user4 = User.create!(name: "Bruna", email: "bruna@teste.com", password: "123456")
 puts "done"
 
 puts "creating lecture"

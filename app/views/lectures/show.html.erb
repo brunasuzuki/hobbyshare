@@ -24,7 +24,11 @@
     </div>
     <div class="col-4">
       <div class="card-trip-small">
-        <img src="https://images.pexels.com/photos/7859276/pexels-photo-7859276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <% if @lecture.photo.key %>
+          <%= cl_image_tag @lecture.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+          <img src="https://images.pexels.com/photos/7859276/pexels-photo-7859276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <% end %>
       </div>
     </div>
   </div>
