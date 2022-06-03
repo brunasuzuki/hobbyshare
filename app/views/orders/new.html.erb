@@ -4,8 +4,10 @@
       <h2><%= @lecture.title %></h2>
       <h4>R$<%= @lecture.price %></h4>
       <div>
+        <%= link_to lecture_path(@lecture) cdo %>
+          <i lass="fas fa-pencil-alt"></i>
         <%= link_to "Confirm purchase", lecture_orders_path(@lecture), method: :post, class: "btn btn-success" %>
-        <%= link_to "Back", lecture_path(@lecture), class: "btn btn-secondary" %>
+        <%#= link_to "Back", lecture_path(@lecture), class: "btn btn-secondary" %>
       </div>
     </div>
   </div>
