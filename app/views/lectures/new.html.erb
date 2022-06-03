@@ -1,16 +1,20 @@
-<div class= "container col-6">
-<h2>Upload your Lecture</h2>
+<div class= "background d-flex justify-content-center">
+  <div class= "create-form container w-50 p-5 ">
 
-<%= simple_form_for(@lecture) do |f| %>
-  <%# f.error_notification %>
-  <%# f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :youtube_url %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn btn-primary mt-3"%>
+    <h2>Upload your Lecture</h2>
+
+    <%= simple_form_for(@lecture) do |f| %>
+      <%# f.error_notification %>
+      <%# f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :youtube_url %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class: "btn btn-primary mt-3 w-100"%>
 
 
-<% end %>
+    <% end %>
+
+  </div>
 </div>
