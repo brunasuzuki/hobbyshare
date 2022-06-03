@@ -16,7 +16,7 @@
           <img src="https://images.pexels.com/photos/1655304/pexels-photo-1655304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
         <% end %>
           <div class="card-product-infos">
-            <h2><%= "#{lecture.title}: #{lecture.description}" %></h2>
+            <h2><%= lecture.title %></h2>
             <%= link_to "Discover our course", lecture_path(lecture), class: "btn btn-ghost mt-2" %>
           </div>
         </div>
