@@ -20,7 +20,7 @@ Lecture.create!(user: user3, title:"Digital Illustration for All: Discover, Cult
 
 Lecture.create!(user: user3, title:"Creative Writing: Crafting Personal Essays with Impact", description:"This is a complete creative writing course for beginners who want to learn creative writing. This coursel will help you to learn creative writing course will make you understand the basics of creative writing, tools, how to become a good writer.", price: 29.00, youtube_url:"https://www.youtube.com/watch?v=gZKx6ZWEjIg")
 
-Lecture.create!(user: user3, title:"Watercolors: Create Realistic Watercolors", description:"", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=lBpFGg-7SCk")
+Lecture.create!(user: user3, title:"Watercolors: Create Realistic Watercolors", description:"In this course I’ll show you how to paint realistically in watercolor and the complete process behind the creation of this watercolor painting.", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=lBpFGg-7SCk")
 
 Lecture.create!(user: user3, title:"Ink Drawing Techniques: Brush, Nib, and Pen Style", description:"The difference between a good drawing and a great one? It’s not as complicated as it may look! All you need is a little shading, and once you’ve mastered these simple techniques your pen and ink illustrations are really going to pop!", price: 30.00, youtube_url:"https://www.youtube.com/watch?v=xqnoWXcckU4")
 
