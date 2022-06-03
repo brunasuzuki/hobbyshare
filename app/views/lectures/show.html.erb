@@ -5,7 +5,8 @@
 
 <div class="container my-5">
   <div class="row justify-content-center">
-    <div class="box-description col-8">
+    <div class="box-description col-8 d-flex flex-column justify-content-between">
+    <div>
       <h1><strong><%= @lecture.title %></strong>
         <% if @lecture.user == current_user %>
           <%= link_to edit_lecture_path(@lecture) do %>
@@ -17,14 +18,17 @@
         <% end %>
       </h1>
       <h4> <%= @lecture.description %></h4>
-      <h4> <%= @lecture.price %></h4>
-      <div class="d-flex align-self-end justify-content-between links">
-        <%= link_to lectures_path do %>
-          <i class="fas fa-angle-double-left"></i>
-        <% end %>
-        <% if @lecture.user != current_user %>
-          <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
-        <% end %>
+      <h4>R$ <%= @lecture.price %></h4>
+    </div>
+      <div class="links">
+        <div class="d-flex justify-content-between ">
+          <%= link_to lectures_path do %>
+            <i class="fas fa-angle-double-left"></i>
+          <% end %>
+          <% if @lecture.user != current_user %>
+            <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="col-4">
