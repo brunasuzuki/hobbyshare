@@ -1,16 +1,20 @@
-<div class= "container col-6">
-<h2>Edit your Lecture</h2>
+<div class="container-form">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-login">
+      <h2>Edit your Lecture</h2>
 
-<%= simple_form_for(@lecture) do |f| %>
-  <%# f.error_notification %>
-  <%# f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :youtube_url %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn btn-primary mt-3"%>
-
-
-<% end %>
+      <%= simple_form_for(@lecture) do |f| %>
+        <%# f.error_notification %>
+        <%# f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :youtube_url %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class: "btn btn-primary mt-3"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
