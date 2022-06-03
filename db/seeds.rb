@@ -10,21 +10,17 @@ puts "done"
 
 puts "creating lecture"
 Lecture.create!(user: user1, title:"Photography for beginners", description:"This is my photography course online for beginners to help you learn photography and take better photos! ", price: 22.00, youtube_url:"https://www.youtube.com/watch?v=ujaCbzLwuB8")
-
 Lecture.create!(user: user2, title:"Painting for beginners", description:"This course is What Every beginner needs to know. This course will to teach new artists of any age how to paint. Classes will be short , simple and EASY to follow.", price: 25.0, youtube_url: "https://www.youtube.com/watch?v=bYaMtELAloM&list=PLXUkNk1HRolHw3ED-2PdIbzXXb44bzI7n")
-
 Lecture.create!(user: user3, title:"llustration for beginners", description:"Create illustrations for animated videos and develop your skills every day to get better. You will start with the basics of building ideas from scratch.
   ", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=IBouhf4seWQ&list=PLYfCBK8IplO4X-jM1Rp43wAIdpP2XNGwP")
-
 Lecture.create!(user: user3, title:"Street Photography: Capture the Life of Your City", description:"In this course, I explain what the City's Picture Projects are, why we should do them, how we do them, and then how we share them.", price: 30.00, youtube_url:"https://www.youtube.com/watch?v=HcZuRpH_2l4")
-
 Lecture.create!(user: user3, title:"Photo Storytelling: Using Color, Contrast, and Scale", description:"Storytelling is powerful. It's also confusing. How can one photo tell a whole story? In this course, we look at how to adapt a story for photography.", price: 35.00, youtube_url:"https://www.youtube.com/watch?v=kp1EtKGUsRc")
 
 Lecture.create!(user: user3, title:"Digital Illustration for All: Discover, Cultivate and Share Your Unique Personal Style", description:"It can be overwhelming to try and find a style that is uniquely yours. In this course, I share the steps I took to discover mine. Whether you're a seasoned illustrator or just getting started, this course will help you take actionable steps to find your style.", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=ht9lTlioQFM")
 
 Lecture.create!(user: user3, title:"Creative Writing: Crafting Personal Essays with Impact", description:"This is a complete creative writing course for beginners who want to learn creative writing. This coursel will help you to learn creative writing course will make you understand the basics of creative writing, tools, how to become a good writer.", price: 29.00, youtube_url:"https://www.youtube.com/watch?v=gZKx6ZWEjIg")
 
-Lecture.create!(user: user3, title:"Watercolors: Create Realistic Watercolors", description:"", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=lBpFGg-7SCk")
+Lecture.create!(user: user3, title:"Watercolors: Create Realistic Watercolors", description:"In this course I’ll show you how to paint realistically in watercolor and the complete process behind the creation of this watercolor painting.", price: 28.00, youtube_url:"https://www.youtube.com/watch?v=lBpFGg-7SCk")
 
 Lecture.create!(user: user3, title:"Ink Drawing Techniques: Brush, Nib, and Pen Style", description:"The difference between a good drawing and a great one? It’s not as complicated as it may look! All you need is a little shading, and once you’ve mastered these simple techniques your pen and ink illustrations are really going to pop!", price: 30.00, youtube_url:"https://www.youtube.com/watch?v=xqnoWXcckU4")
 
