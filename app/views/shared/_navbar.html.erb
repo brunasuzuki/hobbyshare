@@ -1,14 +1,14 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-hobbyshare">
   <div class="container-fluid row">
     <div class="col-1">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "logo.png" %>
       <% end %>
     </div>
     <div class="col">
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <%= simple_form_for :search, url: lectures_path, method: :get do |f| %>
         <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+          <input class="form-control string required" type="text" name="query" id="search_query" />
           <button name="button" type="submit" class="btn btn-flat">
             <i class="fas fa-search"></i> Search
           </button>
