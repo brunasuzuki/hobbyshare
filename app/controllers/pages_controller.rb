@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def home
-    @lectures = Lecture.all.first(4)
+    @lectures = Lecture.all
   end
 end
