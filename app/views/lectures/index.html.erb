@@ -1,87 +1,26 @@
 <div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('https://images.pexels.com/photos/5905716/pexels-photo-5905716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') %>);">
   <div class="w-50">
-    <h1><strong>Created Lecture</strong></h1>
+    <h1><strong>Want to share your hobby?</strong></h1>
     <%= link_to "Create Your Lecture", new_lecture_path, class: "btn btn-primary mt-3" %>
   </div>
 </div>
 
 <div class="d-flex justify-content-between my-3 mx-3">
-
-<div class="card-product col-lg-4 pl-4 mx-1">
-  <img src="https://images.pexels.com/photos/1655304/pexels-photo-1655304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-  <div class="card-product-infos">
-    <h2>Street Photography: Capture the Life of Your City</h2>
-    <%= link_to "Discover our course", new_lecture_path, class: "btn btn-ghost mt-2" %>
+  <div class="row">
+    <% @lectures.each do |lecture|%>
+      <div class= "col-4 mb-4">
+        <div class="card-product pl-4 mx-1">
+        <% if lecture.photo.attached? %>
+          <%= cl_image_tag(lecture.photo.key) %>
+        <% else %>
+          <img src="https://images.pexels.com/photos/1655304/pexels-photo-1655304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <% end %>
+          <div class="card-product-infos">
+            <h2><%= "#{lecture.title}: #{lecture.description}" %></h2>
+            <%= link_to "Discover our course", lecture_path(lecture), class: "btn btn-ghost mt-2" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-</div>
-
-<div class="card-product col-lg-4 mx-1">
-  <img src="https://images.pexels.com/photos/10096890/pexels-photo-10096890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-  <div class="card-product-infos">
-    <h2>Photo Storytelling: Using Color, Contrast, and Scale</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
-
-<div class="card-product mb-5 col-lg-4 mx-1">
-  <img src="https://images.pexels.com/photos/11798029/pexels-photo-11798029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-  <div class="card-product-infos">
-    <h2>Digital Illustration for All: Discover, Cultivate and Share Your Unique Personal Style</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
-</div>
-
-<div class="d-flex justify-content-between my-3 mx-3">
-
-<div class="card-product mb-5 col-lg-4 mx-1">
-  <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-  <div class="card-product-infos">
-    <h2>Creative Writing: Crafting Personal Essays with Impact</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
-
-<div class="card-product mb-5 col-lg-4 mx-1">
-  <img src="https://images.pexels.com/photos/5152828/pexels-photo-5152828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-  <div class="card-product-infos">
-    <h2>Create Realistic Watercolors</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
-
-<div class="card-product mb-5 col-lg-4 mx-1">
-  <img src="https://images.unsplash.com/photo-1454191297004-cefa4b1042d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-  <div class="card-product-infos">
-    <h2>Ink Drawing Techniques: Brush, Nib, and Pen Style</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
-</div>
-
-<div class="d-flex justify-content-between my-3 mx-3">
-
-<div class="card-product mb-5 col-lg-4 mx-1">
-  <img src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-  <div class="card-product-infos">
-    <h2>Lettering for Self-Expression: Create Stunning, Hand-Crafted Type</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
-
-<div class="card-product mb-5 col-lg-4 mx-1">
-  <img src="https://images.unsplash.com/photo-1501127122-f385ca6ddd9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" />
-  <div class="card-product-infos">
-    <h2>Everyday Minimalism: Find Calm & Creativity in Living Simply</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
-
-<div class="card-product mb-5 col-lg-4 mx-1">
-  <img src="https://images.pexels.com/photos/8784646/pexels-photo-8784646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-  <div class="card-product-infos">
-    <h2>Plants at Home: Uplift Your Spirit & Your Space</h2>
-    <%= link_to "Discover our course", lectures_path, class: "btn btn-ghost mt-2" %>
-  </div>
-</div>
 </div>
