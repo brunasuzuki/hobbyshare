@@ -18,15 +18,13 @@
       </h1>
       <h4> <%= @lecture.description %></h4>
       <h4> <%= @lecture.price %></h4>
-      <div class="links">
-        <div class="d-flex justify-content-between ">
-          <%= link_to lectures_path do %>
-            <i class="fas fa-angle-double-left"></i>
-          <% end %>
-          <% if @lecture.user != current_user %>
-            <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
-          <% end %>
-        </div>
+      <div class="d-flex align-items-end justify-content-between links">
+        <%= link_to lectures_path do %>
+          <i class="fas fa-angle-double-left"></i>
+        <% end %>
+        <% if @lecture.user != current_user %>
+          <%= link_to 'Buy', new_lecture_order_path(@lecture), class: "btn btn-primary my-3"%>
+        <% end %>
       </div>
     </div>
     <div class="col-4">
